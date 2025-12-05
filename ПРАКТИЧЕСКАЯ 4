@@ -243,3 +243,86 @@ elif a >0 and a == 0:
     print(True ,"odd")
 else:
     print(False)
+
+#9.3
+a= str(input())
+if a[0] == "/":
+    print("command")
+else:
+    print("it's string")
+
+#10.1
+a=str(input())
+if len(a)==0:
+    print("None")
+elif len(a)<=5:
+    print("short")
+elif 6<=len(a)<=10:
+    print("normal")
+elif len(a) >= 10:
+    print("long")
+
+#10.2
+a=int(input())
+if a<0:
+    print(1_000_000)
+elif a==0:
+    print(2**2)
+else:
+    print(a**3)
+
+#10.3
+numder_1=10
+numder_2=100
+a=int(input())
+if numder_1<=a<=numder_2:
+    print(True)
+else:
+    print(False)
+
+#11.1
+prog_num=0
+a=int(input())
+b=int(input())
+if a < 0 and b < 0:
+    prog_num = a+b
+    print(f"Оба числа отрицательных. Сумма: {prog_num}")
+elif a >=0 and b >=0:
+    prog_num = a-b
+    print(f"Оба числа положительных Сумма: {prog_num}")
+else:
+    print(False)
+
+#11.2
+a=int(input())
+if a % 2:
+    print(a+1)
+else:
+    print(True)
+
+#11.3
+a=input()
+if len(a) > 10:
+    print(a[:5])
+else:
+    print(a)
+
+#12.1
+ru ="абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+en= "adcdefghijklmnopqrstuvwxyz"
+a= input()
+if a in ru:
+    print("rus")
+elif a in en:
+    print("eng")
+else:
+    print(None)
+
+#12.2
+pc_num =10
+a=int(input())
+if a ==pc_num or a== pc_num-1 or a== pc_num+1:
+    print(True)
+else:
+    print(False)
+ '''''
