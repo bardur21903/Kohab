@@ -186,6 +186,18 @@ elif a+b > c and a+c > b and b+c> a:
 else:
     print(False)
 
+#7.3
+a = int(input())
+if a % 10 == 0:
+    print(a**10)
+elif a % 10 == 1:
+    print(a % 3)
+elif a % 10 == 2:
+    print(a/2)
+elif a % 10 >= 3:
+    print(a**2)
+
+
 
 #8.1
 a= input("Введите пароль:")
@@ -324,5 +336,14 @@ a=int(input())
 if a ==pc_num or a== pc_num-1 or a== pc_num+1:
     print(True)
 else:
-    print(False)
+    print(False) 
+#12.3
+print(print('(221-13) * 2'))
+a = int(input)
+if a == 416:
+    print(True)
+elif a > 416:
+    print(">")
+elif a < 416:
+    print("<")
  '''''
