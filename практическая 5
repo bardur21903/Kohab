@@ -30,11 +30,21 @@ print(mass)
 
 #5
 c=[]
+g = []
+h = []
 a = int(input("Введите количество чисел:"))
 for i in range(a):
-    d = 0
     b = int(input("Введите числа:"))
-    d +=1
-if b<0:
+    if  b<0:
+        c.append(b)
+    elif b>0:
+        g.append(b)
+    elif b==0:
+        h.append(b)
+sum(c)
+print(sum(c))
+f=sum(g) / len(g)
+print(f)
+h1 = ["*" * len(h)]
  
 '''''''''''
