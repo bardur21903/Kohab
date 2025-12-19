@@ -1,3 +1,54 @@
+
+#1
+m = ["круг",0.25,"квадрат","треугольник",15,"круг","овал","10"]
+m.remove(0.25)
+m.remove(15)
+m.remove("10")
+print(m)
+
+#2
+abc = ["A","B","C","D","E","F","G"]
+del abc[1:5]
+print(abc)
+
+#3
+numbers=[1,4]
+numbers.insert(1, 2)
+numbers.insert(2, 3)
+print(numbers)
+
+#4
+mass=[14, -6, 3, 11, 6, 8.5, 99, -20, -6, 10, 40, 0.25, -4, 5]
+del mass[1]
+del mass[-7]
+del mass[-6]
+del mass[-2]
+mass.sort()
+print(mass)
+mass.sort(reverse=True)
+print(mass)
+
+#5
+c=[]
+g = []
+h = []
+a = int(input("Введите количество чисел:"))
+for i in range(a):
+    b = int(input("Введите числа:"))
+    if  b<0:
+        c.append(b)
+    elif b>0:
+        g.append(b)
+    elif b==0:
+        h.append(b)
+sum(c)
+print(sum(c))
+f=sum(g) / len(g)
+print(f)
+h1 = ["*" * len(h)]
+
+print(f"Количество звёзд: {len(h)} {h1}")
+
 #1
 matrix=[[1,2,3],[4,5,6],[7,8,9]]
 print("matrix:")
@@ -28,14 +79,17 @@ for elem2 in matrix[2]:
 #2
 matrix_1=[[2,4,3,6],[5,7,1,5]]
 matrix_2=[[2,9,0,2],[3,4,7,6]]
-answer_matrix = [[],[]]
-for elem1 in range(len(matrix_1)):
-    for elem2 in range(len(matrix_1[0])):
-        a=matrix_1[elem1] * matrix_2[elem1]
-        b=matrix_1[elem2] * matrix_2[elem2]
-        answer_matrix.append(a)
-        answer_matrix.append(b)
-        print(answer_matrix)
+
+answer_matrix = [[0]* len(matrix_1[0]) for c in range(len(matrix_1))]
+for i in range(len(matrix_1)):
+    for j in range(len(matrix_1[0])):
+        answer_matrix[i][j] = matrix_1[i][j] * matrix_2[i][j]
+print("Результат умножения:")
+for elem in answer_matrix:
+    print(elem)
+for i in range(len(matrix_1)):
+        summ= sum(answer_matrix[i])
+        print(f"{answer_matrix[i]} сумма строки {summ}")
 
 #3
 fruits = [['Banana', 'apple'],['apricot', 'Avocado'], ['lime', 'lemon'], ['Mango', 'grapes']]
@@ -43,9 +97,23 @@ for elem1 in fruits:
     for elem2 in elem1:
         if elem2[0].isupper():
             print(elem2)
-    '''''''''''
+
 #4
 random_elements = [['toy', 'bee', 'cheese', 'ear'], [False, 'word', '0110110', 10],['happiness', '(╯'')╯', 'luck', None], ['car', '<- code ->', 4.7, True]]
 for elem1 in random_elements:
-    for i, elem2 in enumerate(elem1[]):
-        print(f"Индекс:{i}, Элемент:{elem2}")
+    for i, elem2 in enumerate(elem1):
+     if i==1:
+          print(f"Индекс:{i}, Элемент:{elem2}")   
+#5
+a=int(input("Введите кол-во строк:"))
+b=int(input("Введите кол-во столбцов:"))
+s=[]
+for i in range(a):
+ c=[]
+ for n in range(b):
+     d=int(input(f"Введите значение элемента[{i}][{n}]:"))
+     c.append(d)
+ s.append(c)
+print("Ваш двумерный массив:")
+for elem1 in s:
+    print(elem1)
